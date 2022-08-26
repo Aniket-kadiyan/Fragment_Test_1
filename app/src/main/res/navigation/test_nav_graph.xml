@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/test_nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.fragmenttest1.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_gridFragment"
+            app:destination="@id/gridFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gridFragment"
+        android:name="com.example.fragmenttest1.GridFragment"
+        android:label="GridFragment" >
+        <action
+            android:id="@+id/action_gridFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+</navigation>

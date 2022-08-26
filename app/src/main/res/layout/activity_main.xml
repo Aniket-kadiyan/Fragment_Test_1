@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/ListFragmentView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/GridFragmentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:navGraph="@navigation/test_nav_graph"
+        app:layout_constraintTop_toTopOf="parent"
+        app:defaultNavHost="true"/>
+
+    <android.widget.Button
+        android:id="@+id/ListFragmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@id/GridFragmentButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="List view" />
+
+    <android.widget.Button
+        android:id="@+id/GridFragmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@id/ListFragmentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Grid View"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
